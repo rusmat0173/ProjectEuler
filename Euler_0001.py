@@ -17,7 +17,7 @@ Result:
 # import time to compare approaches
 import time
 
-limit = 1e6
+limit = 1e3
 
 
 start = time.time()
@@ -53,6 +53,12 @@ def getSum(limit):
       sum += x
   return sum
 
-print(getSum(int(1e6)))
+print(getSum(int(1e3)))
+end = time.time()
+print(end - start)
+
+# beautiful solution on Project Euler website; order of magnitude faster
+start = time.time()
+print(sum(set(range(0,1000,3))|set(range(0,1000,5))))
 end = time.time()
 print(end - start)
