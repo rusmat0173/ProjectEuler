@@ -55,4 +55,4 @@ def getSum(limit):
 
 print(getSum(int(1e6)))
 end = time.time()
-print(end - start) 
+print(end - start)
