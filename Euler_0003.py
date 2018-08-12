@@ -26,6 +26,14 @@ Step 2:
 > Test whether A is divisible by any prime number less than K.
 If yes A is not a prime number. If not, A is prime number.
 
+
+
+To test if some x is prime, we generally have to do divisibility tests only up to and including x√.
+
+That's because if some y>x√ were a factor of x, then there would have to be some z
+such that zy=x. And z<x√ because if z>x√, then clearly zy>x (as both z and y would be greater than x√).
+But if z<x√, then we've already tested z in going up to x√!
+
 """
 # initially generate the list of prime numbers using Sieve of Eranthoses (without 1)
 def Eratosthenes(limit):
@@ -92,12 +100,16 @@ def prime_factors(limit):
 # now case in the problem: largest prime factor of 600851475143
 import time
 
-start = time.time()
-z = prime_factors(600851475)
+z = 600851475143
+z_root = z**0.5
+z_rootA = round(z_root)
+print(z_rootA)
+# start = time.time()
+z1 = prime_factors(z_rootA)
 # z = Eratosthenes(1000002)
-print(z)
-end = time.time()
-print(end - start)
+print(z1)
+# end = time.time()
+# print(end - start)
 # print(max(z))
 
 
