@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="187bd550-a33e-40d4-a1a3-9c3720d50642" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/RAhmed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Euler_0004.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Euler0003" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Euler_0003.py" beforeDir="false" afterPath="$PROJECT_DIR$/Euler_0003.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,29 +18,30 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="14" />
+          <entry key="py" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="14" />
+          <entry key="Python" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="5681" />
-          <entry key="txt" value="140" />
+          <entry key="py" value="7567" />
+          <entry key="txt" value="174" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="140" />
-          <entry key="Python" value="5681" />
+          <entry key="PLAIN_TEXT" value="174" />
+          <entry key="Python" value="7567" />
         </counts>
       </usages-collector>
     </session>
@@ -49,13 +49,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Euler_0003.py">
+        <entry file="file://$PROJECT_DIR$/Euler_0004.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <marker date="1533955043784" expanded="true" signature="662:1249" ph="..." />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -80,12 +77,13 @@
         <option value="$PROJECT_DIR$/Euler_0001.py" />
         <option value="$PROJECT_DIR$/Euler_0002.py" />
         <option value="$PROJECT_DIR$/Euler_0003.py" />
+        <option value="$PROJECT_DIR$/Euler_0004.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="48" />
-    <option name="y" value="23" />
+    <option name="x" value="43" />
+    <option name="y" value="34" />
     <option name="width" value="1125" />
     <option name="height" value="730" />
   </component>
@@ -284,19 +282,26 @@
       <option name="project" value="LOCAL" />
       <updated>1533861206805</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Completed Sieve of Eratosthesnes.">
+      <created>1533955068570</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1533955068570</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="23" width="1125" height="730" extended-state="0" />
+    <frame x="43" y="34" width="1125" height="730" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28442028" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28442028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3110774" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32169953" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -320,7 +325,8 @@
     <MESSAGE value="Finish, 3 approaches. Set approach is lovely and fast (from Project Euler website)." />
     <MESSAGE value="Finished." />
     <MESSAGE value="Stub." />
-    <option name="LAST_COMMIT_MESSAGE" value="Stub." />
+    <MESSAGE value="Completed Sieve of Eratosthesnes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Sieve of Eratosthesnes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -344,8 +350,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Euler_0002.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="49" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="49" />
+        <state relative-caret-position="58">
+          <caret line="118" selection-start-line="118" selection-end-line="119" selection-end-column="18" />
           <folding>
             <marker date="1533860940705" expanded="true" signature="1229:1234" ph="..." />
             <marker date="1533860940705" expanded="true" signature="2787:2792" ph="..." />
@@ -355,11 +361,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Euler_0003.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <marker date="1533955043784" expanded="true" signature="662:1249" ph="..." />
-          </folding>
+        <state relative-caret-position="-934">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Euler_0004.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
         </state>
       </provider>
     </entry>

@@ -14,6 +14,18 @@ My Approach?
 >> I'll try with a set approach. N.B. Set is not subscriptable, but can be iterated through. (for s in my_set: ...)
 >> Also, cannot remove from set whilst iterating over it!
 
+> Going through a tree needs while True: ...
+>> However, this comes after for p in primes # <= that caused me a lot of grief/time!
+
+
+Enhanced approach:
+Step 1:
+> Find a whole number nearly greater than the square root of A.
+K ¿ square root(A)
+Step 2:
+> Test whether A is divisible by any prime number less than K.
+If yes A is not a prime number. If not, A is prime number.
+
 """
 # initially generate the list of prime numbers using Sieve of Eranthoses (without 1)
 def Eratosthenes(limit):
@@ -32,17 +44,61 @@ def Eratosthenes(limit):
                 True_dict[i**2 + i * count] = False
                 count += 1
 
+    # check dictionary for True values
     for key, value in True_dict.items():
         if value == True:
             primes.append(key)
 
     return primes
 
-print(Eratosthenes(200))
+# print(Eratosthenes(200))
 
 
+def prime_factors(limit):
+    # create a function for checking if something is integer
 
+    def is_integer(num):
+        if round(num) / num == 1:
+            return True
+        else:
+            return False
 
+    # everything else
+    primes = Eratosthenes(limit)
+    # print(primes)
+    prime_factors = []
+    remainder = limit
+
+    # check if limit is a prime
+    if remainder in primes:
+        return [remainder]
+
+    # rest of algorithm
+    for p in primes:
+        while True:
+            if is_integer(remainder/p) == False:
+                break
+            else:
+                prime_factors.append(p)
+                remainder = remainder/p
+            if remainder ==1:
+                break
+
+    return prime_factors
+
+# test case
+# print(prime_factors(27))
+
+# now case in the problem: largest prime factor of 600851475143
+import time
+
+start = time.time()
+z = prime_factors(600851475)
+# z = Eratosthenes(1000002)
+print(z)
+end = time.time()
+print(end - start)
+# print(max(z))
 
 
 
