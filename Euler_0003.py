@@ -361,12 +361,27 @@ def friend_of_friend(person, musicians):
     return output_set
 
 
-z = friend_of_friend('Simon Lebon', musicians)
-print(z)
+z = friend_of_friend('George Harrison', musicians)
+print(f"Do you know: {z} ?")
+
+# or, turn z into a list and string
+# It's a bit gritty and cumbersome, but belt and barces for immutable strings
+z0 = list(z)
+z0.insert(-1, 'or')
+z1 = str(z0)
+z2 = z1.strip("[]")
+z3 = z2.replace("'", "")
+last_comma = None
+for idx in range(len(z3)):
+    if z3[idx] == ',':
+        last_comma = idx
+z4 = z3[:int(last_comma)] + z3[last_comma +1:]
+print(f"Do you know: {z4} ?")
+
 
 
 """ 
-Works well.
+^ Works well.
 
 However, it's a lot more code than the book's brute force double-looping.
 Book had it easier as I added tuples, e.g. (1,2) to the dictionary - not just, e.g. 2, 3, 4, ...
