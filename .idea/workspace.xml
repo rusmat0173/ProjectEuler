@@ -24,24 +24,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="22" />
+          <entry key="py" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="22" />
+          <entry key="Python" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="7659" />
-          <entry key="txt" value="174" />
+          <entry key="py" value="16941" />
+          <entry key="txt" value="202" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="174" />
-          <entry key="Python" value="7659" />
+          <entry key="PLAIN_TEXT" value="202" />
+          <entry key="Python" value="16941" />
         </counts>
       </usages-collector>
     </session>
@@ -51,8 +51,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Euler_0003.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="103">
+              <caret line="366" lean-forward="true" selection-start-line="366" selection-end-line="366" />
+              <folding>
+                <marker date="1534183943789" expanded="true" signature="9662:9937" ph="..." />
+                <marker date="1534183943789" expanded="true" signature="10695:11139" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,8 +86,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="43" />
-    <option name="y" value="34" />
+    <option name="x" value="31" />
+    <option name="y" value="23" />
     <option name="width" value="1125" />
     <option name="height" value="730" />
   </component>
@@ -296,11 +300,25 @@
       <option name="project" value="LOCAL" />
       <updated>1534045472994</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Completed Sieve of Eratosthesnes.">
+      <created>1534048912936</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1534048912937</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Finished dictionary exercise">
+      <created>1534182099162</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1534182099163</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="34" width="1125" height="730" extended-state="0" />
+    <frame x="31" y="23" width="1125" height="730" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28442028" />
@@ -308,7 +326,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32018209" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45675266" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -333,7 +351,8 @@
     <MESSAGE value="Finished." />
     <MESSAGE value="Stub." />
     <MESSAGE value="Completed Sieve of Eratosthesnes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed Sieve of Eratosthesnes." />
+    <MESSAGE value="Finished dictionary exercise" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished dictionary exercise" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -375,8 +394,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Euler_0003.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="103">
+          <caret line="366" lean-forward="true" selection-start-line="366" selection-end-line="366" />
+          <folding>
+            <marker date="1534183943789" expanded="true" signature="9662:9937" ph="..." />
+            <marker date="1534183943789" expanded="true" signature="10695:11139" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

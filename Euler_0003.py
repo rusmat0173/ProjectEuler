@@ -300,28 +300,15 @@ print(average)
 def friend_of_friend(person, musicians):
     """ takes person in musicians, and checks their friends of friends"""
     # check person is in musicians
-    # use of any command from:
-    # https://stackoverflow.com/questions/16505456/how-exactly-does-the-python-any-function-work
-    names = [musician['names'] for musician in musicians]
-
-    def check_name(person, musicians):
+    names = [musician['name'] for musician in musicians]
+    def check_name(person, names):
         if person in names:
             return True
         else:
             return False
 
-    if not check_name(person, musicians):
+    if not check_name(person, names):
         return "Invalid name"
-
-    # need to get person's id
-    def find_id(person, musicians):
-        for musician in musicians:
-            if musician['name'] == person:
-                unique_id = musician['id']
-                return unique_id
-
-    unique_id = find_id(person, musicians)
-    # ^ actually, not sure this is needed
 
     # list person's friends, so you can check their friends
     def find_friends(person, musicians):
@@ -337,7 +324,10 @@ def friend_of_friend(person, musicians):
 
     # find level2 friends from friends set
     def level2_friends(friends, musicians):
-        """ returns a set"""
+        """
+        returns a set
+        Also returns friends with yourself that has to be adjusted at very end
+        """
         friends_of_friends = []
         for musician in musicians:
             if musician['id'] in friends:
@@ -345,25 +335,39 @@ def friend_of_friend(person, musicians):
                     friends_of_friends.append(pair[1])
 
         level2_friends = friends_of_friends
-        return set( level2_friends)
+        return set(level2_friends)
 
     level2_friends = level2_friends(friends, musicians)
 
-    # finally, need to make sure no overlap between friends and level2friends
-    do_you_know = level2_friends - friends
+    # need to make sure no overlap between friends and level2friends and original person
+    level2_ids = level2_friends - friends
 
-    return do_you_know
+    # find names from ids
+    def names_from_ids(ids, musicians):
+        do_you_know = []
+        for musician in musicians:
+            if musician['id'] in ids:
+                do_you_know.append(musician['name'])
 
-# z = friend_of_friend('Duke Ellington', musicians)
-# print(z)
+        return do_you_know
 
+
+    output_set = names_from_ids(level2_ids, musicians)
+    # finally need to remove original person from being their own friend
+    output_set.remove(person)
+
+    # print(names_from_ids(friends, musicians))
+    # print(names_from_ids(level2_ids, musicians))
+    return output_set
+
+
+z = friend_of_friend('Simon Lebon', musicians)
+print(z)
 
 
 """ 
-Not working, 1 known thing:
-i. check_name function
+Works well.
 
-Other than that seems to work
 However, it's a lot more code than the book's brute force double-looping.
 Book had it easier as I added tuples, e.g. (1,2) to the dictionary - not just, e.g. 2, 3, 4, ...
 I won't do book's approach as is a kind of naive approach and is very nested, so hard to follow.
@@ -374,15 +378,6 @@ of friends, and find as many levels as you want using matrix algebra.
 computationally difficult.
 
 """
-
-names = [musician['name'] for musician in musicians]
-def check_name(person, musicians):
-    if person in names:
-        return True
-    else:
-        return False
-
-print(check_name('John Lennon', names))
 
 
 
