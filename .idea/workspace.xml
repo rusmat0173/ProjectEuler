@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="187bd550-a33e-40d4-a1a3-9c3720d50642" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Euler_0003.py" beforeDir="false" afterPath="$PROJECT_DIR$/Euler_0003.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,14 +33,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="16941" />
-          <entry key="txt" value="202" />
+          <entry key="py" value="18018" />
+          <entry key="txt" value="228" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="202" />
-          <entry key="Python" value="16941" />
+          <entry key="PLAIN_TEXT" value="228" />
+          <entry key="Python" value="18018" />
         </counts>
       </usages-collector>
     </session>
@@ -51,11 +50,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Euler_0003.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="366" lean-forward="true" selection-start-line="366" selection-end-line="366" />
+            <state relative-caret-position="82">
+              <caret line="394" column="3" selection-start-line="394" selection-start-column="3" selection-end-line="394" selection-end-column="3" />
               <folding>
-                <marker date="1534183943789" expanded="true" signature="9662:9937" ph="..." />
-                <marker date="1534183943789" expanded="true" signature="10695:11139" ph="..." />
+                <marker date="1534187623944" expanded="true" signature="9662:9937" ph="..." />
+                <marker date="1534187623944" expanded="true" signature="10695:11139" ph="..." />
               </folding>
             </state>
           </provider>
@@ -314,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534182099163</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Finished social network exercise.">
+      <created>1534183963341</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1534183963341</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -352,7 +358,8 @@
     <MESSAGE value="Stub." />
     <MESSAGE value="Completed Sieve of Eratosthesnes." />
     <MESSAGE value="Finished dictionary exercise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished dictionary exercise" />
+    <MESSAGE value="Finished social network exercise." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished social network exercise." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -394,11 +401,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Euler_0003.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="366" lean-forward="true" selection-start-line="366" selection-end-line="366" />
+        <state relative-caret-position="82">
+          <caret line="394" column="3" selection-start-line="394" selection-start-column="3" selection-end-line="394" selection-end-column="3" />
           <folding>
-            <marker date="1534183943789" expanded="true" signature="9662:9937" ph="..." />
-            <marker date="1534183943789" expanded="true" signature="10695:11139" ph="..." />
+            <marker date="1534187623944" expanded="true" signature="9662:9937" ph="..." />
+            <marker date="1534187623944" expanded="true" signature="10695:11139" ph="..." />
           </folding>
         </state>
       </provider>
