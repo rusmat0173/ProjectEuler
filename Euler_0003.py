@@ -489,6 +489,7 @@ for idx, musician in enumerate(musicians):
 
 # Task 2. search dict of dicts
 def search(search_term, dict_of_dicts):
+    """ search dictionary of dictionaries. Allows multiple results"""
     output = []
     for key, values in dict_of_dicts.items():
         inner_dict = values
@@ -502,6 +503,9 @@ def search(search_term, dict_of_dicts):
         return f"Search output is: {output}"
 
 print()
-print(search('Patti Smith', musicians_plus))
+print(search('guitar', musicians_plus))
 
+# Task 3. sort dict of dicts by some internal key. TO DO
+def sorter():
+    pass
 
