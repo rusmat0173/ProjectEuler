@@ -36,7 +36,8 @@ But if z<x√, then we've already tested z in going up to x√!
 
 """
 # v Data Science form Scratch books prefers this method of division!
-from __future__ import division
+# from __future__ import division
+# ^ actually not needed as already have Pyuthon 3!
 
 # initially generate the list of prime numbers using Sieve of Eranthoses (without 1)
 def Eratosthenes(limit):
@@ -230,6 +231,11 @@ beatles = [{'id': 1, 'name': 'Paul McCartney', 'group': 'beatles', 'instrument':
 beatles.sort(key=lambda x: x['instrument'])
 print([beatle['name'] for beatle in beatles])
 
+# Also, subscriptable in a sense
+print()
+print(beatles[0])
+print(beatles[0]["name"], "!!!")
+print()
 
 """ 
 SOCIAL NETWORK EXERCISE FROM DATA MGT. FROM SCRATCH BOOK
@@ -361,7 +367,7 @@ def friend_of_friend(person, musicians):
     return output_set
 
 
-z = friend_of_friend('George Harrison', musicians)
+z = friend_of_friend('Adele', musicians)
 print(f"Do you know: {z} ?")
 
 # or, turn z into a list and string
@@ -393,16 +399,109 @@ of friends, and find as many levels as you want using matrix algebra.
 computationally difficult.
 
 """
+# Python's Easter Egg: the Zen of Python, from 'import this'
+import this
+
+# Let's try the book's approach
+
+users = [
+    { "id": 0, "name": "Hero" },
+    { "id": 1, "name": "Dunn" },
+    { "id": 2, "name": "Sue" },
+    { "id": 3, "name": "Chi" },
+    { "id": 4, "name": "Thor" },
+    { "id": 5, "name": "Clive" },
+    { "id": 6, "name": "Hicks" },
+    { "id": 7, "name": "Devin" },
+    { "id": 8, "name": "Kate" },
+    { "id": 9, "name": "Klein" }
+]
+friendships = [(0, 1), (0, 2), (1, 2), (1, 3), (2, 3), (3, 4),
+               (4, 5), (5, 6), (5, 7), (6, 8), (7, 8), (8, 9)]
+
+for user in users:
+    user["friends"] = []
+
+for i, j in friendships:
+    # this works because users[i] is the user whose id is i
+    users[i]["friends"].append(users[j]) # add i as a friend of j
+    users[j]["friends"].append(users[i]) # add j as a friend of i
+
+# Additional [RA] check what is happening
+print("!!!", users[0])
+
+def friends_of_friend_ids_bad(user):
+    # "foaf" is short for "friend of a friend"
+    return [foaf["id"]
+            for friend in user["friends"]     # for each of user's friends
+            for foaf in friend["friends"]]    # get each of _their_ friends
 
 
+z = friends_of_friend_ids_bad(users[0])
+print(z)
+
+# OK, my turn. First add ['relations2'], just the single id number of the level1 friends
+print(musicians)
+for musician in musicians:
+    musician["relations2"] = []
+    for item in musician["relations"]:
+        musician["relations2"].append(item[1])
+
+print(musicians[0])
+# ^ ok, works. Now use same function as book, with correct (for me) variable names
+def check(name, musicians):
+    for musician in musicians:
+        print(musician['instrument'])
+        if musician['instrument'] == name:
+            return True
+        else:
+            pass
+    return False
 
 
+print(check('keyboards', musicians))
+# print(musicians)
 
+"""
+Actually, none of the above worked because of the difference between indexing from 0 as per book, 
+and my string 'id' indexing. Not worthwhile to fix!
 
+LESSON: (again) go for dictionary of dictionaries, not list of dictionaries, as Rice MOOC also does.
 
+TASKS:
+1. Create a toy dict of dict.
+2. Search dict of dict.
+3. Sort dict of dict by some internal key.
 
+"""
+# Task 1. sort musicians, so that again again in ID order.
+musicians.sort(key=lambda musicians: musicians['id'], reverse=False)
+# remove the relationships2 field, which is the last field
+for musician in musicians:
+    del musician['relations2']
+# now rename ids to start with 0, just to make easier
+musicians_plus = {}
+for musician in musicians:
+    musician['id'] -= 1
+for idx, musician in enumerate(musicians):
+    musicians_plus[idx] = musician
+# print(musicians_plus)
 
+# Task 2. search dict of dicts
+def search(search_term, dict_of_dicts):
+    output = []
+    for key, values in dict_of_dicts.items():
+        inner_dict = values
+        if search_term in inner_dict.values():
+            output.append(dict_of_dicts[key])
+        else:
+            pass
+    if len(output) == 0:
+        return "Unsuccessful search"
+    else:
+        return f"Search output is: {output}"
 
-
+print()
+print(search('Patti Smith', musicians_plus))
 
 
