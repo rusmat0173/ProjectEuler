@@ -519,7 +519,7 @@ z = sorter('group', musicians_plus)
 print('\nsorter:\n', z)
 
 """
-Chapter 3 of Grus' Data Mgt. from Scratch book (10-day trial copy).
+Chapter 4 of Grus' Data Mgt. from Scratch book (10-day trial copy).
 
 N.B. zip (x, y), zip is a generator, so only works once!!!
 
@@ -539,4 +539,39 @@ z = [vi +  wi for vi, wi in zip(v, w)]
 # print(z)
 # ^ this use the same powerful syntax we used earlier in this file.
 # That  is 'list comprehension'!
+
+friendships = [[0, 1, 1, 0, 0, 0, 0, 0, 0, 0], # user 0
+               [1, 0, 1, 1, 0, 0, 0, 0, 0, 0], # user 1
+               [1, 1, 0, 1, 0, 0, 0, 0, 0, 0], # user 2
+               [0, 1, 1, 0, 1, 0, 0, 0, 0, 0], # user 3
+               [0, 0, 0, 1, 0, 1, 0, 0, 0, 0], # user 4
+               [0, 0, 0, 0.5, 2, 0, -1, 'a', 'b', 0], # user 5
+               [0, 0, 0, 0, 0, 1, 0, 0, 1, 0], # user 6
+               [0, 0, 0, 0, 0, 1, 0, 0, 1, 0], # user 7
+               [0, 0, 0, 0, 0, 0, 1, 1, 0, 1], # user 8
+               [0, 0, 0, 0, 0, 0, 0, 0, 1, 0]] # user 9
+
+print(friendships[0][2] == 1)
+print(friendships[0][8] == 1)
+
+# "Similarly, to find the connections a node has, you only need to inspect the column
+# (or the row) corresponding to that node:"
+
+# So how does is_friend work?????
+friends_of_four = [i                                              # only need
+                   for i, is_friend in enumerate(friendships[4])  # to look at
+                   if is_friend]
+print(friends_of_four)
+
+friends_of_five = [i                                              # only need
+                   for i, cheese in enumerate(friendships[5])  # to look at
+                   if cheese]                                  # one row
+print(friends_of_five)
+
+# ^ Wow, that is powerful: the is_friend/cheese work so long as is a non-zero matrix entry!!!
+# (Some kind of boolean.)
+list0 = [0, 0, 1, 0, 2, 0 , -2, 8]
+print([i for i, non_zero in enumerate(list0) if non_zero])
+
+
 

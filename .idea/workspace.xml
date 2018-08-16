@@ -15,12 +15,13 @@
     <session id="-439960592">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -35,14 +36,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="25247" />
-          <entry key="txt" value="283" />
+          <entry key="py" value="25775" />
+          <entry key="txt" value="288" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="283" />
-          <entry key="Python" value="25247" />
+          <entry key="PLAIN_TEXT" value="288" />
+          <entry key="Python" value="25775" />
         </counts>
       </usages-collector>
     </session>
@@ -52,10 +53,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Euler_0003.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="505" column="14" selection-start-line="505" selection-start-column="14" selection-end-line="505" selection-end-column="14" />
+            <state relative-caret-position="346">
+              <caret line="572" column="33" selection-start-line="572" selection-start-column="33" selection-end-line="572" selection-end-column="33" />
               <folding>
-                <marker date="1534396510844" expanded="true" signature="15768:16269" ph="..." />
+                <marker date="1534419850030" expanded="true" signature="15768:16269" ph="..." />
+                <marker date="1534419850030" expanded="true" signature="18017:18019" ph="..." />
               </folding>
             </state>
           </provider>
@@ -349,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534251798026</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Dictionary of dictionaries search and functions implemented.">
+      <created>1534396543107</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1534396543107</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -389,7 +398,8 @@
     <MESSAGE value="Finished dictionary exercise" />
     <MESSAGE value="Finished social network exercise." />
     <MESSAGE value="Dictionary of dictionaries search function implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dictionary of dictionaries search function implemented." />
+    <MESSAGE value="Dictionary of dictionaries search and functions implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dictionary of dictionaries search and functions implemented." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -431,10 +441,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Euler_0003.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="505" column="14" selection-start-line="505" selection-start-column="14" selection-end-line="505" selection-end-column="14" />
+        <state relative-caret-position="346">
+          <caret line="572" column="33" selection-start-line="572" selection-start-column="33" selection-end-line="572" selection-end-column="33" />
           <folding>
-            <marker date="1534396510844" expanded="true" signature="15768:16269" ph="..." />
+            <marker date="1534419850030" expanded="true" signature="15768:16269" ph="..." />
+            <marker date="1534419850030" expanded="true" signature="18017:18019" ph="..." />
           </folding>
         </state>
       </provider>
