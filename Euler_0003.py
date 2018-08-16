@@ -489,7 +489,7 @@ for idx, musician in enumerate(musicians):
 
 # Task 2. search dict of dicts
 def search(search_term, dict_of_dicts):
-    """ search dictionary of dictionaries. Allows multiple results"""
+    """ search dictionary of dictionaries. Allows multiple results """
     output = []
     for key, values in dict_of_dicts.items():
         inner_dict = values
@@ -505,7 +505,38 @@ def search(search_term, dict_of_dicts):
 print()
 print(search('guitar', musicians_plus))
 
-# Task 3. sort dict of dicts by some internal key. TO DO
-def sorter():
-    pass
+# Task 3. sort dict of dicts by some internal key.
+# Dude, is dictionary not a list!
+# We could use OrderedDict, or turn into a some kind of list than sort,
+# turning back into dictionary if desired. # <= prefer this to OrderDict
+def sorter(sort_field, d_of_d):
+    l_of_d = [value for value in d_of_d.values()]
+    l_of_d.sort(key=lambda x: x[sort_field])
+    d_of_d2 = {item['id']:item for item in l_of_d}
+    return d_of_d2
+
+z = sorter('group', musicians_plus)
+print('\nsorter:\n', z)
+
+"""
+Chapter 3 of Grus' Data Mgt. from Scratch book (10-day trial copy).
+
+N.B. zip (x, y), zip is a generator, so only works once!!!
+
+N.B. Python has its own array, but not so efficient, so everyone uses numpy
+
+"""
+v, w = [1, 2], [2, 1]
+# print(v + w)
+# ^ not what we want
+
+def vector_add(v, w):
+    """adds corresponding elements"""
+    return [v_i + w_i
+            for v_i, w_i in zip(v, w)]
+
+z = [vi +  wi for vi, wi in zip(v, w)]
+# print(z)
+# ^ this use the same powerful syntax we used earlier in this file.
+# That  is 'list comprehension'!
 
