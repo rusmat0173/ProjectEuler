@@ -9,13 +9,13 @@ The prime factors of 13195 are 5, 7, 13 and 29.
 What is the largest prime factor of the number 600851475143 ?
 
 My Approach?
-> Initially, create a list of ptime numbers using Sieve of Eranthoses.
+> Initially, create a list of prime numbers using Sieve of Eranthoses.
 >> That can be done in different ways, including dictionary, list of dictionaries and set.
 >> I'll try with a set approach. N.B. Set is not subscriptable, but can be iterated through. (for s in my_set: ...)
 >> Also, cannot remove from set whilst iterating over it!
 
 > Going through a tree needs while True: ...
->> However, this comes after for p in primes # <= that caused me a lot of grief/time!
+>> However, this comes AFTER for p in primes # <= that caused me a lot of grief/time!
 
 
 Enhanced approach:
@@ -37,9 +37,10 @@ But if z<x√, then we've already tested z in going up to x√!
 """
 # v Data Science form Scratch books prefers this method of division!
 # from __future__ import division
-# ^ actually not needed as already have Pyuthon 3!
+# ^ actually not needed as already have Python 3!
+import time
 
-# initially generate the list of prime numbers using Sieve of Eranthoses (without 1)
+# initially generate the list of prime numbers using Sieve of Eratothenses (without 1)
 def Eratosthenes(limit):
     primes = []
     True_dict = {i: True for i in range(1,limit+1)}
@@ -68,7 +69,6 @@ def Eratosthenes(limit):
 
 def prime_factors(limit):
     # create a function for checking if something is integer
-
     def is_integer(num):
         if round(num) / num == 1:
             return True
@@ -102,19 +102,57 @@ def prime_factors(limit):
 # print(prime_factors(27))
 
 # now case in the problem: largest prime factor of 600851475143
-import time
-#
-# z = 1000000
-# z_root = z**0.5
-# z_rootA = round(z_root)
-# print(z_rootA)
-# start = time.time()
-# z1 = prime_factors(z_rootA)
-# z = Eratosthenes(1000002)
-# print(z1)
-# end = time.time()
-# print(end - start)
-# print(max(z))
+# Step 1. What is just larger than sqrt of 600851475143
+z = 600851475143
+z_root = z**0.5
+z_rootA = round(z_root)
+print(z_rootA)
+
+# Step 2. So now we need to find prime factors up to z_rootA
+z1 = Eratosthenes(z_rootA)
+print(max(z1))
+# ok, maximum value needed for sieve is 775121
+
+# Step 3. We need to generate all prime numbers up to 137, using Eratothesnes function,
+# and then check prime factors of 600851475143, but only with a sieve up to 137.
+# I.e. don't need to sieve up to 600851475143.
+# If it has no prime factors <= 137, it is a prime itself.
+# This needs a modification to prime_factors, to input the max value of the sieve
+def prime_factors2(limit, sieve):
+    # create a function for checking if something is integer
+    def is_integer(num):
+        if round(num) / num == 1:
+            return True
+        else:
+            return False
+
+    # everything else
+    primes = Eratosthenes(sieve)
+    # print(primes)
+    prime_factors = []
+    remainder = limit
+
+    # rest of algorithm
+    for p in primes:
+        while True:
+            if is_integer(remainder/p) == False:
+                break
+            else:
+                prime_factors.append(p)
+                remainder = remainder/p
+            if remainder ==1:
+                break
+
+    return prime_factors
+
+
+
+z2 = prime_factors2(600851475143, 775121)
+print(z2)
+print(max(z2))
+# ^ this is the answer
+
+
 
 # later Euler puzzle
 # trial and error to find 10001st prime
