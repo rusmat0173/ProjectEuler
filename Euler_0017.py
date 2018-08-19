@@ -74,5 +74,12 @@ for n in range(0, 1001):
 # print(long_string)
 print(len(long_string))
 
+"""
+An interesting way seen on Project Euler solution thread for this is to add a dictionary item for 
+every number, in a kind of automated fashion. 
+While the partitioning of number is elegant does ask for 1001 items in the dict, however!
+
+"""
+
 
 
