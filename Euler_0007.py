@@ -9,7 +9,7 @@ What is the 10 001st prime number?
 
 
 My Approach?
-> Did using work on Problem 3.  Problem 3 shown (again) below, and then trial anderor for Project 7.
+> Did using work on Problem 3.  Problem 3 shown (again) below, and then trial and error for Project 7.
 
 BELOW IS PROJECT 3 TEXT
 > Initially, create a list of prime numbers using Sieve of Eranthoses.
